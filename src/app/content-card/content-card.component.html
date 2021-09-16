@@ -1,0 +1,7 @@
+
+<div *ngFor="let item of content.items; let i = index">
+    <span [innerHTML]="content.getAtIndex(i)"></span>
+    <hr>
+</div>
+
+<div [innerHTML]="content.getAtIndex(3)"></div>
