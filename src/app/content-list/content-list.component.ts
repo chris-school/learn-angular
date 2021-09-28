@@ -2,16 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 @Component({
-  selector: 'app-content-card',
-  templateUrl: './content-card.component.html',
-  styleUrls: ['./content-card.component.scss']
+  selector: 'app-content-list',
+  templateUrl: './content-list.component.html',
+  styleUrls: ['./content-list.component.scss']
 })
-export class ContentCardComponent implements OnInit {
+export class ContentListComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  contentArray: Content[] = [];
 
+  displayId(itemId: Number) {
+    console.log("Item id: " + itemId);
+  }
+
+  ngOnInit(): void {
     let contentItem1: Content = {
       id: 0,
       author: "Leo Tolstoy",
@@ -51,6 +56,10 @@ export class ContentCardComponent implements OnInit {
       body: "The Cherry Orchard is the last play by Russian playwright Anton Chekhov. Written in 1903, it was first published by Znaniye, and came out as a separate edition later that year in Saint Petersburg, via A.F. Marks Publishers."
     }
 
-    let contentArray = {contentItem1, contentItem2, contentItem3, contentItem4, contentItem5}
+    this.contentArray.push(contentItem1)
+    this.contentArray.push(contentItem2)
+    this.contentArray.push(contentItem3)
+    this.contentArray.push(contentItem4)
+    this.contentArray.push(contentItem5)
   }
 }
