@@ -1,5 +1,21 @@
-<!-- <span *ngFor="let content of contentArray; last as isLast" [class.is-last]="isLast"> -->
-    <div *ngFor="let content of contentArray; last as isLast" [class.is-last]="isLast" class="contentItem">
+    <!-- <div *ngFor="let content of contentArray; last as isLast" [class.is-last]="isLast" class="contentItem">
+        <h1>Title: {{content.title}}</h1>
+        <img class="contentImage" (click)="displayId(content.id)" *ngIf="content.imgURL" src="{{content.imgURL}}">
+        <h3>Author: {{content.author}}</h3>
+        <p>Description: {{content.body}}</p>
+        <p *ngIf="content.type">Type: {{content.type}}</p>
+        <h4 *ngIf="content.tags">Tags:</h4>
+        <ul *ngFor="let tag of content.tags">
+            <li>{{tag}}</li>
+        </ul>
+    </div> -->
+
+    <div class="searchBar">
+        <input type="text" #searchQuery> <button (click)="search(searchQuery.value)">Search</button>
+        <h2>{{foundContent}}</h2>
+    </div>
+
+    <div *ngFor="let content of (contentArray | filterContent: 'Novel')" class="contentItem type1">
         <h1>Title: {{content.title}}</h1>
         <img class="contentImage" (click)="displayId(content.id)" *ngIf="content.imgURL" src="{{content.imgURL}}">
         <h3>Author: {{content.author}}</h3>
@@ -11,4 +27,26 @@
         </ul>
     </div>
 
-<!-- </span> -->
+    <div *ngFor="let content of (contentArray | filterContent: 'Book')" class="contentItem type2">
+        <h1>Title: {{content.title}}</h1>
+        <img class="contentImage" (click)="displayId(content.id)" *ngIf="content.imgURL" src="{{content.imgURL}}">
+        <h3>Author: {{content.author}}</h3>
+        <p>Description: {{content.body}}</p>
+        <p *ngIf="content.type">Type: {{content.type}}</p>
+        <h4 *ngIf="content.tags">Tags:</h4>
+        <ul *ngFor="let tag of content.tags">
+            <li>{{tag}}</li>
+        </ul>
+    </div>  
+
+    <div *ngFor="let content of (contentArray | filterContent: 'Story Fiction')" class="contentItem type3">
+        <h1>Title: {{content.title}}</h1>
+        <img class="contentImage" (click)="displayId(content.id)" *ngIf="content.imgURL" src="{{content.imgURL}}">
+        <h3>Author: {{content.author}}</h3>
+        <p>Description: {{content.body}}</p>
+        <p *ngIf="content.type">Type: {{content.type}}</p>
+        <h4 *ngIf="content.tags">Tags:</h4>
+        <ul *ngFor="let tag of content.tags">
+            <li>{{tag}}</li>
+        </ul>
+    </div>

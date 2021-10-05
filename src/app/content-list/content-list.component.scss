@@ -1,7 +1,7 @@
 .contentItem {
-    padding: 5em;
-    margin: 10em;
-    border: 5px solid black;
+    padding: 3em;
+    margin: 5em;
+    //border: 5px solid black;
     border-radius: 20px;
 }
 
@@ -13,4 +13,35 @@
 .is-last {
     border: 2px solid black;
     border-radius: 20px;
+}
+
+.searchBar {
+    margin: auto;
+    width: 50%;
+
+    h2 {
+        text-align: center;
+    }
+
+    button {
+        margin: 2em 1em 2em 1em;
+        width: 20%;
+    }
+
+    input {
+        margin: 2em 1em 2em 1em;
+        width: 60%;
+    }
+}
+
+.type1 {
+    border: 5px solid pink;
+}
+
+.type2 {
+    border: 5px solid greenyellow;
+}
+
+.type3 {
+    border: 5px solid lightblue;
 }
