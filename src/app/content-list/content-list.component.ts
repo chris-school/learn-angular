@@ -10,6 +10,9 @@ export class ContentListComponent implements OnInit {
 
   constructor() { }
 
+  title = "title";
+  tags = "tags";
+
   contentArray: Content[] = [];
   foundContent: string = "";
 
