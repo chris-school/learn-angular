@@ -1,0 +1,24 @@
+<div>
+    <label for="contentID">Content ID</label>
+    <input id="contentID" type="text" #contentID required>
+
+    <label for="contentAuthor">Author</label>
+    <input id="contentAuthor" type="text" required>
+
+    <label for="contentIMG">Image</label>
+    <input id="contentIMG" type="text">
+
+    <label for="contentType">Type</label>
+    <input id="contentType" type="text">
+
+    <label for="contentTitle">Title</label>
+    <input id="contentTitle" type="text" required>
+
+    <label for="contentBody">Body</label>
+    <input id="contentBody" type="text" required>
+
+    <label for="contentTags">Tags</label>
+    <input id="contentTags" type="text">
+
+    <button (click)="submitContent(contentID.value)">Create</button>
+</div>
