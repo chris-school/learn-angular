@@ -17,6 +17,7 @@
 
     <div *ngFor="let content of (contentArray | filterContent: 'Novel')" class="contentItem type1">
         <h1 [appHoverStyle]="title">Title: {{content.title}}</h1>
+        <a [routerLink]="['/content',content.id]" routerLinkActive="active">Content Detail</a><br>
         <img *ngIf="content.imgURL; else elseBlock" class="contentImage" (click)="displayId(content.id)" src="{{content.imgURL}}">
         <ng-template #elseBlock>
             <img class="contentImage" src="https://www.publicbooks.org/wp-content/uploads/2017/01/book-e1484158615982.jpg">
@@ -32,6 +33,7 @@
 
     <div *ngFor="let content of (contentArray | filterContent: 'Book')" class="contentItem type2">
         <h1 [appHoverStyle]="title">Title: {{content.title}}</h1>
+        <a [routerLink]="['/content',content.id]" routerLinkActive="active">Content Detail</a><br>
         <img *ngIf="content.imgURL; else elseBlock" class="contentImage" (click)="displayId(content.id)" src="{{content.imgURL}}">
         <ng-template #elseBlock>
             <img class="contentImage" src="https://www.publicbooks.org/wp-content/uploads/2017/01/book-e1484158615982.jpg">
@@ -47,6 +49,7 @@
 
     <div *ngFor="let content of (contentArray | filterContent: 'Story Fiction')" class="contentItem type3">
         <h1 [appHoverStyle]="title">Title: {{content.title}}</h1>
+        <a [routerLink]="['/content',content.id]" routerLinkActive="active">Content Detail</a><br>
         <img *ngIf="content.imgURL; else elseBlock" class="contentImage" (click)="displayId(content.id)" src="{{content.imgURL}}">
         <ng-template #elseBlock>
             <img class="contentImage" src="https://www.publicbooks.org/wp-content/uploads/2017/01/book-e1484158615982.jpg">
